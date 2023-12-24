@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+class Main{
+    public static void main (String [] args){
+        Scanner sc = new Scanner(System.in);
+        int x = sc.nextInt();
+        Solution one = new Solution();
+        System.out.println(one.isPalindrome(x));
+
+    }
+}
+
+class Solution {
+    public boolean isPalindrome(int x) {
+        int ans = x;
+        int rev=0;
+        while (x!=0){
+            rev = rev * 10 + x%10;
+            x= x/10;
+        }
+        if (ans==rev){
+            return true;
+        }
+        else {
+            return false;
+        }
+
+    }
+}

@@ -9,7 +9,7 @@ class Solution {
             }else if (c==')' && !st.isEmpty() && st.peek()=='(') { st.pop();
             }else if (c=='}'&& !st.isEmpty() && st.peek()=='{'){ st.pop();
             }else if (c==']'&& !st.isEmpty() && st.peek()=='['){ st.pop();
-            }
+            }else return false;
         }
         return st.isEmpty();
     }
